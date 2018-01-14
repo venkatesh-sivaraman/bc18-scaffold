@@ -19,7 +19,7 @@ echo "=== ensuring dependencies ==="
 mtput setaf 5
 echo "$ pip3 install --user cffi eel tqdm werkzeug psutil"
 mtput sgr0
-pip3 install --user cffi eel tqdm werkzeug psutil
+pip install --user cffi eel tqdm werkzeug psutil
 RESULT=$?
 if [ $RESULT -ne 0 ]; then
     echo "Warning: pip install failed!"
@@ -31,4 +31,4 @@ export NODOCKER=1
 mtput setaf 5
 echo "$ python3 $DIR/battlecode-manager/gui.py"
 mtput sgr0
-python3 $DIR/battlecode-manager/gui.py
+python $DIR/battlecode-manager/gui.py
